@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { resetFakeAsyncZone } from '@angular/core/testing';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test';
+  username: any;
+
+  reset(){
+   this.username="";
+  }
 }
+
+
