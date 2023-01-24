@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { resetFakeAsyncZone } from '@angular/core/testing';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +6,10 @@ import { resetFakeAsyncZone } from '@angular/core/testing';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'test';
-  username: any;
+  loadedFeature='recipe';
 
-  reset(){
-   this.username="";
+  onNavigate(feature:string){
+    this.loadedFeature=feature;
   }
 }
 
